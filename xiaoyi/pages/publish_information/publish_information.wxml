@@ -1,0 +1,29 @@
+<!-- 用户的输入界面 -->
+
+<view>商品名：</view>
+<input placeholder="输入商品名(必填，30字以内)" bindinput="addname" maxlength="30"></input>
+<view class="fenlei">
+  请选择分类:<picker bindchange="bindPickerChange" value="{{index}}" range="{{fenleibiaoqian}}" >
+  <view class="picker">
+    {{fenleibiaoqian[index]}}
+  </view>
+</picker>
+</view>
+
+<view>商品简介：</view>
+<textarea bindinput="addjianjie"  placeholder="输入商品简介（必填，500字以内） " maxlength="500" ></textarea>
+<view>商品售价：</view>
+<input type="digit" placeholder="输入商品价格（必填）" bindinput="addprice"></input>
+<view>商品原价：</view>
+<input type="digit" placeholder="输入商品原价（选填）" bindinput="addprice2"></input>
+<view class="imgzi">商品图片：（1~5张）</view>
+<view class="tu">
+  <view class="img" wx:for="{{imgurl}}">
+    <image class="image" mode='aspectFill' src='{{item}}'></image>
+    <view class='delect' data-deindex='{{index}}' bindtap='imgDelete'>
+      <image class='delectimg' src='../../images/icons/delect.png'></image>  
+    </view>
+  </view> 
+  <image class="shangchuan" bindtap="shangchuan" src="../../images/icons/+.png"></image>
+</view>
+<button type="primary" class="fabu" bindtap="fabu">发布</button>

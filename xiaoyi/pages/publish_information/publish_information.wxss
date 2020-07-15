@@ -1,0 +1,79 @@
+/* pages/publish_information/publish_information.wxss */
+
+.title{
+  width: 100%;
+  margin: 10rpx;
+  padding: 10rpx;
+  font-size: 60rpx;
+  font-weight: bold;
+  color: #5c5c5c;
+}
+.tu{
+  margin-top: 10rpx;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.image{
+  border-radius: 15rpx;
+  height: 200rpx;
+  width: 200rpx
+}
+.img{
+  height: 200rpx;
+  width: 200rpx;
+  margin: 25rpx;
+  position: relative;
+}
+.delect{
+  width:50rpx;
+  height:50rpx;
+  position:absolute;
+  right:-10rpx;
+  top:-10rpx;
+}
+.delectimg{
+  width: 100%;
+  height: 100%;
+}
+.shangchuan{
+  border-radius: 15rpx;
+  padding: 25rpx;
+  margin: 25rpx;
+  height: 200rpx;
+  width: 200rpx;
+  font-size: 30rpx;
+  border: 5rpx solid  grey
+}
+input{
+  width: 724rpx;
+  height: 50rpx;
+  margin: 10rpx;
+  border: 3rpx solid  grey;
+  border-radius: 10rpx;
+  padding-left: 5rpx;
+}
+textarea{
+  width: 724rpx;
+  height: 300rpx;
+  margin: 10rpx;
+  border: 3rpx solid  grey;
+  border-radius: 10rpx;
+  padding-left: 5rpx;
+}
+.fenlei{
+  display: flex;
+  width: 724rpx;
+  height: 50rpx;
+  margin: 10rpx;
+  padding-left: 5rpx;
+}
+picker{
+  margin-left:20rpx; 
+  padding: 0rpx 30rpx;
+  border: 3rpx solid  grey;
+    border-radius: 10rpx;
+}
+button{
+  margin: 20rpx;
+}

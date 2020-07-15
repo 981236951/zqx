@@ -1,0 +1,26 @@
+<view class="search">
+  <input class="srkuang" placeholder="请输入搜索内容" bindinput="sousuo"></input>
+  <button class="sousuo" bindtap="getsp">搜索</button>
+</view>
+<view class="liebiao">
+  <view class="shangpin" id="{{item._id}}" wx:for="{{splist}}" wx:key="{{item}}" wx:if="{{item.sell}}" bindtap="gotocommodity">
+    <image class="spimg" lazy-load="true" mode='aspectFill' src="{{item.imgsrc[0]}}"></image>
+    <view class="you">
+      <view class="top">
+        <view class="title">{{item.name}}</view>
+      </view>
+      <view class="neirong">
+        <text class="price" space="nbsp">¥ {{item.price}}</text>
+        <view class="zi">
+          <text class="date">{{item.date}}</text>
+          <text class="tag">#{{item.fenlei}}</text>
+        </view>
+        <view class="shu">
+          <view>浏览数:{{item.liulan}}</view>
+          <view>收藏数:{{item.shoucang}}</view>
+          <view>留言数:{{item.liuyan}}</view>
+        </view>
+      </view>
+    </view>
+   </view>
+</view>

@@ -1,0 +1,166 @@
+/* pages/message/message.wxss */
+page {
+  background-color: #eeeeee;
+}
+.jlfl{
+  background-color: white;
+  position: fixed;
+  top: 0rpx;
+}
+.nav{
+  white-space: nowrap;
+}
+.nav_item{
+  width: 250rpx;
+  padding: 20rpx 65rpx;
+  font-size: 30rpx;
+  display: inline-block;
+}
+.nav_item.active{
+  border-bottom: 5rpx solid #b22222;
+}
+.huifu{
+  background-color: white;
+  margin-top: 80rpx;
+  padding: 10rpx;
+  margin-bottom: 110rpx;
+}
+.hfzi{
+  font-size: 35rpx;
+  margin: 10rpx;
+  padding-left: 20rpx;
+  height: 55rpx;
+}
+.hfnr{
+  margin: 10rpx;
+  width: 730rpx;
+  border-top: 3rpx solid #eeeeee;
+}
+.user{
+  height: 70rpx;
+  display: flex;
+}
+.userimg{
+  height: 70rpx;
+  width: 70rpx;
+  border-radius: 10rpx;
+  margin: 10rpx;
+}
+.username{
+  font-size: 25rpx;
+  width: 400rpx;
+  color: #5c5c5c;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+}
+.time{
+  font-size: 20rpx;
+  width: 200rpx;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  color: #999;
+}
+.neirong{
+  font-size: 30rpx;
+  max-width: 600rpx;
+  min-height: 50rpx;
+  word-break:break-all;
+  margin-left: 100rpx;
+  margin-bottom: 15rpx;
+}
+.liebiao{
+  margin-top: 80rpx;
+  background-color: #eeeeee;
+  padding: 10rpx 0rpx;
+}
+.shangpin{
+  border-radius: 25rpx;
+  display: flex;
+  background-color: #ffffff;
+  margin: 10rpx;
+  width: 730rpx;
+  height: 230rpx;
+  border: 2rpx solid #e2e2e2;
+}
+.shangpin.selled{
+  opacity: 0.5;
+}
+.spimg{
+  border-radius: 25rpx;
+  margin: 8rpx;
+  width: 210rpx;
+  height: 210rpx;
+}
+.you{
+  margin: 10rpx;
+  width: 474rpx;
+  display: flex;
+  flex-flow: column;
+  min-width: 0;
+}
+.top{
+  width: 100%;
+  height: 50rpx;
+  margin: 8rpx;
+  display: flex;
+}
+.title{
+  font-size: 35rpx;
+  width: 464rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;   
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.neirong{
+  width: 464rpx;
+  margin: 5rpx;
+  display: flex;
+  flex-flow: column;
+}
+.zi{
+  height: 40rpx;
+  display: flex;
+  margin: 5rpx;
+}
+.tag{
+  font-size: 25rpx;
+  color: #aaa;
+  font-style: oblique;
+  margin-left: 60rpx
+}
+.sell{
+  display: flex;
+}
+.price{
+  width: 300rpx;
+  margin-left: 30rpx;
+  font-size: 35rpx;
+  color: red;
+  font-style: oblique;
+  margin: 8rpx;
+}
+.issell{
+  margin-left: 20rpx;
+  font-size: 35rpx;
+  color: red;
+}
+.date{
+  font-size: 25rpx;
+  color: #999;
+}
+.shu{
+  width: 464rpx;
+  display: flex;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  padding-top: 5rpx;
+  height: 30rpx;
+  font-size: 25rpx;
+  color: #bbbbbb;
+  border-top: 2rpx solid #e2e2e2;
+}
+.shu view{
+  flex: 1;
+}

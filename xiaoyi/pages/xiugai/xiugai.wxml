@@ -1,0 +1,32 @@
+<!--pages/xiugai/xiugai.wxml-->
+<view>商品名：{{shangpin.name}}</view>
+<input placeholder="输入商品名(必填，30字以内)" bindinput="addname" maxlength="30"></input>
+<view class="fenlei">
+  请选择分类:<picker bindchange="bindPickerChange" value="{{index}}" range="{{fenleibiaoqian}}" >
+  <view class="picker">
+    {{fenleibiaoqian[index]}}
+  </view>
+</picker>
+</view>
+
+<view>商品简介：{{shangpin.jianjie}}</view>
+<textarea bindinput="addjianjie"  placeholder="输入商品简介（必填，500字以内） " maxlength="500" ></textarea>
+<view>商品售价：{{shangpin.price}}</view>
+<input type="digit" placeholder="输入商品价格（必填）" bindinput="addprice"></input>
+<view>商品原价：{{shangpin.price2}}</view>
+<input type="digit" placeholder="输入商品原价（选填）" bindinput="addprice2"></input>
+<view class="imgzi">商品图片：（1~5张）(出现未知错误，如需删除原图片，请先添加一张新图再删除)</view>
+<view class="tu">
+  <view class="img" wx:for="{{shangpin.imgsrc}}">
+    <image class="image" mode='aspectFill' src='{{item}}'></image>
+    <view class='delect' data-deindex='{{index}}' bindtap='imgDelete'>
+      <image class='delectimg' src='../../images/icons/delect.png'></image>  
+    </view>
+  </view> 
+  <image class="shangchuan" bindtap="shangchuan" src="../../images/icons/+.png"></image>
+</view>
+<view class="anniu">
+  <button bindtap="shanchu" class="shanchu">删除</button>
+  <button type="primary" bindtap="xiugai">修改</button>
+</view>
+

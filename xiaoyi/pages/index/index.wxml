@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view class="container">
+需先在我的页面进行登录方可使用更多功能，谢谢
+</view>

@@ -1,0 +1,71 @@
+<scroll-view scroll-y="true" class="shangpin">
+  <view class='tu'>
+    <swiper catchtap="onSwiperTap" vertical="{{false}}"  indicator-dots="true" autoplay="true" interval="5000" circular="true" indicator-active-color="#c41010" >
+      <swiper-item wx:for ="{{shangpin.imgsrc}}">
+        <image mode='aspectFit' src='{{item}}' data-list="{{item}}" data-src="{{item}}" bindtap="imgyulan"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <!-- 商品信息 -->
+  <view class="xinxi">
+    <view class="title">
+      <view class="spname">{{shangpin.name}}</view>
+      <view class="shoucang" wx:if="{{shangpin.sell}}">
+        <image class="scicon" src="{{scurl}}" bindtap="clicksc"></image>
+        <view class="sczi" >收藏</view>
+      </view>
+    </view>
+    <view class="price">  
+      <text class="shoujia" space="nbsp">¥ {{shangpin.price}} </text>
+      <text class="yuanjia" space="nbsp"> {{shangpin.price2}} </text>
+    </view>
+    <view class="jieshao">
+      <view class="jszi">详细介绍：</view>
+      <view class="jianjie">{{shangpin.jianjie}}</view>
+    </view>
+    <view class="zi">
+      <view class="liulanshu" space="nbsp">浏览数 {{shangpin.liulan}}</view> 
+      <text class="date">{{shangpin.date}}</text>
+    </view>
+  </view>
+
+
+
+  <!-- 用户信息 -->
+  <view class="zhong">
+    <view class="seller">
+      <image class="sellerimg" mode="aspectFill" src="{{user.imgsrc}}"></image>
+      <text class="sellername">{{user.name}}</text>
+    </view>
+    <button class="anniu" wx:if="{{!isseller&&shangpin.sell}}" space="nbsp" bindtap="goumai">购 买</button>
+    <button class="anniu" wx:if="{{isseller&&shangpin.sell}}" space="nbsp" bindtap="gotoxiugai">修 改</button>
+  </view>
+
+  <!-- 买家家信息 -->
+  <view class="zhong" wx:if="{{!shangpin.sell}}">
+    <view class="seller">
+      <text>买家：</text>
+      <image class="sellerimg" mode="aspectFill" src="{{buyer.imgsrc}}"></image>
+      <text class="sellername">{{buyer.name}}</text>
+    </view>
+  </view>
+
+  <!-- 回复 -->
+  <view class="huifu">
+    <view class="hfzi">用户留言（{{liuyanlist.length}}）</view>
+    <view class="hfnr" wx:for="{{liuyanlist}}">
+      <view class="user">
+        <image class="userimg" src="{{item.userimg}}"></image>
+        <view class="username">{{item.username}}</view>
+        <view class="time">{{item.time}}</view>
+      </view>
+      <view class="neirong">{{item.liuyan}}</view>
+    </view>
+  </view>
+</scroll-view>
+
+<view class="di" wx:if="{{shangpin.sell}}">
+  <input class="srkuang" placeholder="在此输入留言(100字)" bindinput="addliuyan" maxlength="100"></input>
+  <button class="fasong" bindtap="fasong">发送</button>
+</view>

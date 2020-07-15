@@ -1,0 +1,81 @@
+page {
+  background-color: #eeeeee;
+}
+button{
+  background-color: #b22222;
+  margin-top: 33rpx;
+  margin-left: 73rpx;
+  padding-top: 35rpx;
+  border-radius: 850rpx;
+  color: white;
+  min-width: 500rpx;
+  height: 150rpx;
+  font-size: 70rpx;
+  line-height: 70rpx;
+}
+.head{
+  background-color: #b22222;
+  height: 170rpx;
+  padding-top: 50rpx;
+}
+.user{
+  margin-left:50rpx; 
+  width: 650rpx;
+  height: 220rpx;
+  border-radius: 110rpx;
+  background-color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  border: 6rpx solid #b22222;
+}
+.img{
+  height: 200rpx;
+  width: 200rpx;
+  border-radius: 100rpx;
+  margin: 4rpx;
+  /* border: 5rpx solid #b22222bb; */
+}
+.name{
+  color: #b22222;
+  font-size: 40rpx;
+  margin-top: 130rpx;
+  margin-left: 10rpx;
+}
+.jilu{
+  margin: auto;
+  margin-top: 130rpx; 
+  height: 250rpx;
+  width: 680rpx;
+}
+.zi{
+  width: 680rpx;
+  height: 70rpx;
+  padding: 15rpx;
+  padding-left: 10rpx;
+  font-size: 35rpx;
+  color: white;
+  background-color: #b22222;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+}
+.jlfl{
+  height: 150rpx;
+  background-color: white;
+  border-bottom-left-radius:  30rpx;
+  border-bottom-right-radius: 30rpx;
+}
+.sfg{
+  display: inline-block;
+  width: 170rpx;
+  padding-left: 40rpx 
+}
+.sfg view{
+  height: 80rpx;
+  width: 80rpx;
+  font-size: 30rpx;
+  margin: 8rpx;
+}
+.sfg image{
+  height: 80rpx;
+  width: 80rpx;
+  margin-top: 10rpx;
+}

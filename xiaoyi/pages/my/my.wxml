@@ -1,0 +1,22 @@
+
+<view class="my">
+  <view class="head">
+    <view class="user">
+      <button wx:if='{{isShow}}' bindgetuserinfo='isGetinfo'   open-type='getUserInfo' >授权登录</button>
+      <image class="img" src="{{userInfo.imgsrc}}" ></image>
+      <view class="name">{{userInfo.name}}</view>
+    </view>
+  </view>
+
+  <view class="jilu">
+    <view class="zi">我的记录</view>
+    <scroll-view scroll-x="true" class="jlfl" >
+      <view class="sfg" wx:for="{{jilu}}" bindtap="gojilu" data-index='{{index}}'>
+        <image src="{{item.icon}}" mode="widthFix"></image>
+        <view >{{item.text}}</view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="xiaoxi">
+  </view>
+</view>

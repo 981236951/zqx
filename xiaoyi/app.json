@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/homepage/homepage",
+    "pages/publish/publish",
+    "pages/message/message",
+    "pages/my/my",
+    "pages/commodity/commodity",
+    "pages/comment/comment",
+    "pages/collection/collection",
+    "pages/publish_information/publish_information",
+    "pages/chat/chat",
+    "pages/search/search",
+    "pages/index/index",
+    "pages/sao/sao",
+    "pages/xiugai/xiugai"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#b22222",
+    "backgroundColor": "#8e1b1b",
+    "enablePullDownRefresh": true,
+    "navigationBarTitleText": "校易"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#8e1b1b",
+    "backgroundColor": "#fff",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/homepage/homepage",
+        "text": "首页",
+        "iconPath": "images/icons/icon1-2.png",
+        "selectedIconPath": "images/icons/icon1.png"
+      },
+      {
+        "pagePath": "pages/publish/publish",
+        "text": "分类",
+        "iconPath": "images/icons/icon5-2.png",
+        "selectedIconPath": "images/icons/icon5.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "images/icons/icon3-2.png",
+        "selectedIconPath": "images/icons/icon3.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/icons/icon4-2.png",
+        "selectedIconPath": "images/icons/icon4.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

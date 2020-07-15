@@ -1,0 +1,8 @@
+{
+  "usingComponents":{
+    "search":"../../components/search/search"
+  },
+  "navigationBarTitleText": "校易首页",
+  "enablePullDownRefresh":true,
+  "onReachBottomDistance": 100
+}

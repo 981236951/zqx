@@ -1,0 +1,45 @@
+<view class="collection">
+  <!-- 导航栏 -->
+  <scroll-view scroll-x="true" class="jlfl" >
+    <view class="nav" wx:for="{{jilu}}" bindtap='activeNav' data-index='{{index}}' class="nav_item {{index==currentIndexNav?'active':''}}">
+      <view >{{item}}</view>
+    </view>
+  </scroll-view>
+  <!-- 商品列表 -->
+  <view class="liebiao" wx:if="{{currentIndexNav!=3}}">
+    <view id="{{item._id}}" wx:for="{{splist}}" bindtap="gotocommodity" class="shangpin {{!item.sell&&currentIndexNav==0?'selled':''}}">
+      <image class="spimg" lazy-load="true" mode='aspectFill' src="{{item.imgsrc[0]}}"></image>
+      <view class="you">
+        <view class="top">
+          <view class="title">{{item.name}}</view>
+        </view>
+        <view class="spneirong">
+          <view class="sell">
+            <view class="price" space="nbsp">¥ {{item.price}}</view>
+            <view class="issell" wx:if="{{item.sell===false}}"> 已售出</view>
+          </view>
+          <view class="zi">
+            <text class="date">{{item.date}}</text>
+            <text class="tag">#{{item.fenlei}}</text>
+          </view>
+          <view class="shu">
+            <view>浏览数:{{item.liulan}}</view>
+            <view>收藏数:{{item.shoucang}}</view>
+            <view>留言数:{{item.liuyan}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 留言 -->
+  <view class="huifu" wx:if="{{currentIndexNav==3}}"  >
+    <view class="hfnr" wx:for="{{liuyanlist}}" id="{{item.spid}}" bindtap="gotocommodity">
+      <view class="user">
+        <image class="userimg" src="{{item.userimg}}"></image>
+        <view class="username">{{item.username}}</view>
+        <view class="time">{{item.time}}</view>
+      </view>
+      <view class="lyneirong">{{item.liuyan}}</view>
+    </view>
+  </view>
+</view>

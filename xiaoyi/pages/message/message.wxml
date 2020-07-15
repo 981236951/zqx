@@ -1,0 +1,60 @@
+<!--pages/message/message.wxml-->
+<!-- 导航栏 -->
+  <scroll-view scroll-x="true" class="jlfl" >
+    <view class="nav" wx:for="{{list}}" bindtap='activeNav' data-index='{{index}}' class="nav_item {{index==currentIndexNav?'active':''}}">
+      <view >{{item}}</view>
+    </view>
+  </scroll-view>
+<!-- <view wx:if="{{currentIndexNav==0}}" wx:for="{{liuyanlist}}" class="liuyanlist">
+  <view>{{item.liuyan}}</view>
+</view> -->
+<!-- 留言 -->
+<view class="huifu"wx:if="{{currentIndexNav==0}}"  >
+  <view class="hfzi">未读留言（{{liuyanlist.length}}）</view>
+  <view class="hfnr" wx:for="{{liuyanlist}}" id="{{item.spid}}" bindtap="gotocommodityly">
+    <view class="user">
+      <image class="userimg" src="{{item.userimg}}"></image>
+      <view class="username">{{item.username}}</view>
+      <view class="time">{{item.time}}</view>
+    </view>
+    <view class="neirong">{{item.liuyan}}</view>
+  </view>
+</view>
+<view class="huifu"wx:if="{{currentIndexNav==1}}"  >
+  <view class="hfzi">全部留言（{{liuyanlist.length}}）</view>
+  <view class="hfnr" wx:for="{{liuyanlist}}" id="{{item.spid}}" bindtap="gotocommodity">
+    <view class="user">
+      <image class="userimg" src="{{item.userimg}}"></image>
+      <view class="username">{{item.username}}</view>
+      <view class="time">{{item.time}}</view>
+    </view>
+    <view class="neirong">{{item.liuyan}}</view>
+  </view>
+</view>
+<!-- 商品列表 -->
+<view class="liebiao" wx:if="{{currentIndexNav==2}}">
+<view class="hfzi">未确认订单（{{splist.length}}）</view>
+  <view id="{{item._id}}" wx:for="{{splist}}" bindtap="gotocommoditydd" class="shangpin {{!item.sell&&currentIndexNav==0?'selled':''}}">
+    <image class="spimg" lazy-load="true" mode='aspectFill' src="{{item.imgsrc[0]}}"></image>
+    <view class="you">
+      <view class="top">
+        <view class="title">{{item.name}}</view>
+      </view>
+      <view class="neirong">
+        <view class="sell">
+          <view class="price" space="nbsp">¥ {{item.price}}</view>
+          <view class="issell" wx:if="{{item.sell===false}}"> 已售出</view>
+        </view>
+        <view class="zi">
+          <text class="date">{{item.date}}</text>
+          <text class="tag">#{{item.fenlei}}</text>
+        </view>
+        <view class="shu">
+          <view>浏览数:{{item.liulan}}</view>
+          <view>收藏数:{{item.shoucang}}</view>
+          <view>留言数:{{item.liuyan}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

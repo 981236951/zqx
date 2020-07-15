@@ -1,0 +1,45 @@
+<!--pages/homepage/homepage.wxml-->
+<view class='shouye'>
+  <!-- 搜索框 -->
+    <search></search>
+  <!-- 轮播图 -->
+  <view class='lunbotu'>
+    <swiper catchtap="onSwiperTap" vertical="{{false}}"  indicator-dots="true" autoplay="true" interval="5000" circular="true" indicator-active-color="#c41010">
+      <swiper-item wx:for ="{{lunbotulist}}">
+        <image mode='widthFix' src='{{item.src}}'></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 按钮 -->
+  <view class="anniu">
+    <button class="fabu" bindtap="gotoPublish" >发布</button>
+    <button class="sao" bindtap="gotosao" >敬请期待</button>
+    <button class="help" bindtap="gotohelp" >使用指南</button>
+  </view>
+ 
+  
+  <!-- 商品列表 -->
+  <view class="liebiao">
+    <view class="ershou">二手好货</view>
+    <view class="shangpin" id="{{item._id}}" wx:for="{{shangpinlist}}" bindtap="gotocommodity">
+      <image class="spimg" lazy-load="true" mode='aspectFill' src="{{item.imgsrc[0]}}"></image>
+      <view class="you">
+        <view class="top">
+          <view class="title">{{item.name}}</view>
+        </view>
+        <view class="neirong">
+          <text class="price" space="nbsp">¥ {{item.price}}</text>
+          <view class="zi">
+            <text class="date">{{item.date}}</text>
+            <text class="tag">#{{item.fenlei}}</text>
+          </view>
+          <view class="shu">
+            <view>浏览数:{{item.liulan}}</view>
+            <view>收藏数:{{item.shoucang}}</view>
+            <view>留言数:{{item.liuyan}}</view>
+          </view>
+        </view>
+      </view>
+     </view>
+  </view>
+</view>
